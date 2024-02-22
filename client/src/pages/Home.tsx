@@ -1,7 +1,6 @@
-import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
-import Vishwajit from "../../public/Vishwajit.jsx";
+import Vishwajit from "@/models/Vishwajit.jsx";
 import { Suspense } from "react";
 
 function Home() {
