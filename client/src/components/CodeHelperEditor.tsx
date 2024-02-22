@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./ui/button";
 import { Save, Share2 } from "lucide-react";
 import {
@@ -13,13 +12,14 @@ import {
   compilerSliceStateType,
   updateCurrentLanguage,
 } from "@/redux/slices/compilerSlice";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../redux/store";
 
 function CodeHelperEditor() {
   const d = useDispatch();
   const currentLanguage = useSelector(
-    (state) => state.compilerSlice.currentLanguage
+    (state: RootState) => state.compilerSlice.currentLanguage
   );
+
   return (
     <div className="__helper_header h-[50px] bg-black text-white p-2 flex items-center justify-between ">
       <div className="flex gap-2 __btn_container">

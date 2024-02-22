@@ -1,11 +1,11 @@
 import CodeHelperEditor from "@/components/CodeHelperEditor";
+import RenderCode from "@/components/RenderCode";
 import CodeEditor from "@/components/ui/CodeEditor";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import React from "react";
 
 function Compiler() {
   return (
@@ -22,7 +22,7 @@ function Compiler() {
         className="h-[calc(100dvh-60px)] min-w-[200px]"
         defaultSize={50}
       >
-        RIght Side
+        <RenderCode />
       </ResizablePanel>
     </ResizablePanelGroup>
   );

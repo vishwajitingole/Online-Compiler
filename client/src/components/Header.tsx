@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="w-full h-[60px] bg-gray-900 text-white p-3 flex justify-between items-center">
       <Link to="/">
-        <h2 clasName="font-bold">Web Compiler</h2>
+        <h2 className="font-bold">Web Compiler</h2>
       </Link>
       <ul className="flex gap-2">
         <li>
