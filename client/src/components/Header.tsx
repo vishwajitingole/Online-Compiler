@@ -1,17 +1,27 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import { motion } from "framer-motion";
+
+import { useState } from "react";
 
 function Header() {
-  useGSAP(() => {
-    // gsap code here...
-    gsap.from(".left", { x: -440, rotate: 360 });
-  });
+  const [rotate, setRotate] = useState(false);
   return (
     <div className="w-full h-[60px] bg-gray-900 text-white p-3 flex justify-between items-center">
       <Link to="/">
-        <h2 className="font-bold left text-amber-400 ">Web Compiler</h2>
+        <motion.h2
+          animate={{ scale: 1 }}
+          initial={{ scale: 0 }}
+          className="font-bold left text-amber-400 "
+        >
+          <motion.div
+            onClick={() => setRotate(!rotate)}
+            animate={{ rotate: rotate ? 360 : 0 }}
+            initial={{}}
+          >
+            Web Compiler
+          </motion.div>
+        </motion.h2>
       </Link>
       <ul className="flex gap-2">
         <li>
@@ -20,7 +30,13 @@ function Header() {
               className="font-semibold animate-ping text-amber-400 animate-bounce"
               variant="outline"
             >
-              Compiler
+              <motion.div
+                onClick={() => setRotate(!rotate)}
+                animate={{ rotate: rotate ? 360 : 0 }}
+                initial={{}}
+              >
+                Compiler
+              </motion.div>
             </Button>
           </Link>
         </li>
