@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 function Home() {
   const [move, setMove] = useState(false);
   const [laptop, setLaptop] = useState(false);
-  const [title, setTitle] = useState(false);
+
   return (
     <div>
       <motion.div
